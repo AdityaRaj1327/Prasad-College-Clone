@@ -1,0 +1,80 @@
+<html  xmlns:th="http://www.thymeleaf.org" th:replace="base::layout(~{::section})">
+<head>
+
+</head>
+<body>
+<section>
+<form method="post" th:object="${dto}">
+
+ <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Enrollment no</label>
+    <input type="number" th:field="${dto.enrollmentno}" class="form-control" required>
+  </div>
+ <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Name</label>
+    <input type="text" th:field="${dto.name}" class="form-control" required>
+  </div>
+   <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">FName</label>
+    <input type="text" th:field="${dto.fname}" class="form-control" required>
+  </div>
+   <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">MName</label>
+    <input type="text" th:field="${dto.mname}" class="form-control" required>
+  </div>
+  
+   <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Gender</label>
+   <div class="form-check form-check-inline">
+  <input class="form-check-input" th:field="${dto.gender}"  type="checkbox" id="inlineCheckbox1" value="male">
+  <label class="form-check-label"  for="inlineCheckbox1">Male</label>
+</div>
+<div class="form-check form-check-inline">
+  <input class="form-check-input"th:field="${dto.gender}" type="checkbox" id="inlineCheckbox2" value="female">
+  <label class="form-check-label" for="inlineCheckbox2">Female</label>
+</div>
+
+  </div>
+   <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Address</label>
+    <input type="text" th:field="${dto.address}" class="form-control" required>
+  </div>
+  
+    <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Program</label>
+    <input type="text" th:field="${dto.program}" class="form-control" required>
+  </div>
+  
+   <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Branch</label>
+    <input type="text" th:field="${dto.branch}" class="form-control" required>
+  </div>
+   <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Year</label>
+    <input type="text" th:field="${dto.year}" class="form-control" required>
+  </div>
+ 
+
+
+   <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Contact no</label>
+    <input type="number" th:field="${dto.contactno}" class="form-control" required>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Email address</label>
+    <input type="email" th:field="${dto.emailaddress}" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+     </div>
+      <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Password</label>
+    <input type="password" th:field="${dto.password}" class="form-control" required>
+  </div>
+    
+    
+ 
+ 
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+</section>
+</body>
+</html>

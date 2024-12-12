@@ -1,0 +1,48 @@
+<html  xmlns:th="http://www.thymeleaf.org" th:replace="base::layout(~{::section})">
+<head>
+
+</head>
+<body>
+<section>
+<h2 class="text-info text-center">Enquiry Form</h2>
+<div class="row">
+
+<div class="col-sm-5">
+<img alt="" src="img/Chairman-Message.jpg" class="w-100">
+</div>
+<div class="col-sm-1"></div>
+<div class="col-sm-6">
+<div th:if=${msg}>
+<p th:text=${msg} class="alert alert-success"></p>
+</div>
+<form method="post" th:object="${enquiryDto}">
+
+ <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Name</label>
+    <input type="text" th:field="${enquiryDto.name}" class="form-control" required>
+  </div>
+   <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Contact no</label>
+    <input type="number" th:field="${enquiryDto.contactno}" class="form-control" required>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Email address</label>
+    <input type="email" th:field="${enquiryDto.email}" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+     </div>
+     <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Enquiry Text</label>
+    <textarea class="form-control" th:field="${enquiryDto.enquirytext}" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+   </div>
+  
+ 
+ 
+ 
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</div>
+</div>
+
+
+</section>
+</body>
+</html>
